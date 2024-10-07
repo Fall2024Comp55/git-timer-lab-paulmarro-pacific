@@ -32,7 +32,6 @@ public class MyFirstTimer extends GraphicsProgram implements ActionListener {
 		myLabel.setLabel("times called? " + numTimes);
 	}
 	
-	
 	public static void main(String[] args) {
 		new MyFirstTimer().start();
 	}
