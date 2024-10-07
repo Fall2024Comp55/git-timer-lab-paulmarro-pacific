@@ -8,7 +8,8 @@ public class MyFirstTimer extends GraphicsProgram implements ActionListener {
 	public static final int PROGRAM_WIDTH = 800;
 	public static final int MAX_STEPS = 20;
 	private GLabel myLabel;
-
+	private int numTimes = 0;
+	
 	public void init() {
 		setSize(PROGRAM_WIDTH, PROGRAM_HEIGHT);
 		requestFocus();
@@ -22,7 +23,9 @@ public class MyFirstTimer extends GraphicsProgram implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
+		numTimes += 1;
 		myLabel.move(5, 0);
+		myLabel.setLabel("times called? " + numTimes);
 	}
 	
 	
