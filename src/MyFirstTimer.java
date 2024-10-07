@@ -23,6 +23,10 @@ public class MyFirstTimer extends GraphicsProgram implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
+		if (numTimes == 10) {
+			someTimerVar.stop();
+			return;
+		}
 		numTimes += 1;
 		myLabel.move(5, 0);
 		myLabel.setLabel("times called? " + numTimes);
