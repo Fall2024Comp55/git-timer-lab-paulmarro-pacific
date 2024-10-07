@@ -9,7 +9,7 @@ public class MyFirstTimer extends GraphicsProgram implements ActionListener {
 	public static final int MAX_STEPS = 20;
 	private GLabel myLabel;
 	private int numTimes = 0;
-	
+	private Timer someTimerVar = new Timer(1000, this);
 	public void init() {
 		setSize(PROGRAM_WIDTH, PROGRAM_HEIGHT);
 		requestFocus();
@@ -18,7 +18,7 @@ public class MyFirstTimer extends GraphicsProgram implements ActionListener {
 	public void run() {
 		myLabel = new GLabel("# of times called?", 0, 100);
 		add(myLabel);
-		Timer someTimerVar = new Timer(1000, this);
+		someTimerVar.setInitialDelay(3000);
 		someTimerVar.start();
 	}
 	
